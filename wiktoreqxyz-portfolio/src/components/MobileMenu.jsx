@@ -10,22 +10,25 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         
             <button className="absolute top-6 right-6 text-white text-3xl focus:outline-none cursor-pointer bg-red-500 w-9 rounded-xl" aria-label="Close Menu" onClick={() => setMenuOpen(false)}>&times;</button>
 
-            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgba(10,10,10,0.8)] w-[75%] text-center  py-5 rounded-xl
+            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgb(10,10,10)] w-[75%] text-center  py-5 rounded-xl
+                ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}
+                `} onClick={() => setMenuOpen(false)}>Strona Główna</a>
+            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgb(10,10,10)] w-[75%] text-center  py-5 rounded-xl
                 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}
                 `} onClick={() => setMenuOpen(false)}>O mnie</a>
-            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgba(10,10,10,0.8)] w-[75%] text-center  py-5 rounded-xl
+            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgb(10,10,10)] w-[75%] text-center  py-5 rounded-xl
                 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}
                 `} onClick={() => setMenuOpen(false)}>Usługi</a>
-            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgba(10,10,10,0.8)] w-[75%] text-center  py-5 rounded-xl
+            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgb(10,10,10)] w-[75%] text-center  py-5 rounded-xl
                 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}
                 `} onClick={() => setMenuOpen(false)}>Doświadczenie</a>
-            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgba(10,10,10,0.8)] w-[75%] text-center  py-5 rounded-xl
+            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgb(10,10,10)] w-[75%] text-center  py-5 rounded-xl
                 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}
                 `} onClick={() => setMenuOpen(false)}>Kontakt</a>
-            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgba(10,10,10,0.8)] w-[75%] text-center  py-5 rounded-xl
+            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgb(10,10,10)] w-[75%] text-center  py-5 rounded-xl
                 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}
                 `} onClick={() => setMenuOpen(false)}>Komputer</a>
-            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgba(10,10,10,0.8)] w-[75%] text-center  py-5 rounded-xl
+            <a href="" className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 bg-[rgb(10,10,10)] w-[75%] text-center  py-5 rounded-xl
                 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}
                 `} onClick={() => setMenuOpen(false)}>Portfolio</a>
         </div>

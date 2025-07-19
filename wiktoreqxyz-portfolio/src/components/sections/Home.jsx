@@ -1,6 +1,9 @@
+import { RevealOnScroll } from "../RevealOnScroll"
+
 export const Home = () => {
     return (
         <header id="home" className="min-h-screen flex items-center justify-center realtive">
+            <RevealOnScroll>
             <div className="text-center z-10 px-4">
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-right max-w-3xl">Jestem Wiktor i pomogę ci z <span className="bg-gradient-to-r from-emerald-500 to-cyan-600 bg-clip-text text-transparent">rozwojem twojego wymarzonego</span> projektu!</h1>
 
@@ -8,9 +11,10 @@ export const Home = () => {
 
                 <div className="flex justify-center space-x-4">
                     <a href="" className="bg-cyan-500 text-white py-3 px-6 font-medium transition relative overflow-hidden hover:bg-cyan-600">Zobacz portfolio</a>
-                    <a href="" className="bg-transparent border-1 border-gray-700/50 text-white py-3 px-6 font-medium transition relative overflow-hidden hover:bg-[rgba(255,255,255,0.04)]">Skontaktuj się ze mną</a>
+                    <a href="" className="bg-transparent border-1 border-gray-500/50 text-white py-3 px-6 font-medium transition relative overflow-hidden hover:bg-[rgba(255,255,255,0.04)]">Skontaktuj się ze mną</a>
                 </div>
             </div>
+            </RevealOnScroll>
         </header>
     )
 }
