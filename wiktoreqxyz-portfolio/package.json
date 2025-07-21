@@ -1,5 +1,4 @@
 {
-  "name": "wiktoreqxyz-portfolio",
   "homepage": "https://wavi23.github.io/wiktoreqxyz-react",
   "private": true,
   "version": "0.0.0",
@@ -17,6 +16,7 @@
     "emailjs-com": "^3.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-router-dom": "^7.7.0",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {

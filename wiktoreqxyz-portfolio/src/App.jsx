@@ -9,6 +9,8 @@ import { About } from './components/sections/About'
 import { Experience } from './components/sections/Experience'
 import { Footer } from './components/Footer'
 import { Contact } from './components/sections/Contact'
+import { Computer } from './components/sections/Computer'
+
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -24,6 +26,7 @@ function App() {
         <About />
         <Experience />
         <Contact />
+        <Computer />
         <Footer />
       </div>
     </>
