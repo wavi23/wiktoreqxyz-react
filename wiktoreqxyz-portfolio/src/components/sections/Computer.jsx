@@ -14,109 +14,82 @@ import klawiatura from "./assets/klawiatura.png"
 import podkladka from "./assets/podkladka.png"
 import myszka from "./assets/myszka.png"
 import plyta from "./assets/plyta.png"
+import { FiCpu, FiHardDrive, FiHeadphones, FiMonitor, FiMousePointer } from "react-icons/fi"
 
 export const Computer = () => {
+    const components = [
+        { img: plyta, name: "Płyta główna", spec: "Asus Rog STRIX B550-F", price: "950", icon: <FiCpu className="text-emerald-400" /> },
+        { img: cpu, name: "Procesor", spec: "AMD RYZEN 5700X", price: "500", icon: <FiCpu className="text-cyan-400" /> },
+        { img: obudowa, name: "Obudowa", spec: "Krux Leda (Midi Tower)", price: "350", icon: <FiCpu className="text-emerald-400" /> },
+        { img: karta, name: "Karta Graficzna", spec: "MSI Geforce RTX 3070 Gaming X", price: "1300", icon: <FiMonitor className="text-cyan-400" /> },
+        { img: ram, name: "RAM", spec: "Kingston Fury Beast DDR5 5600mhz (2x8GB)", price: "300", icon: <FiHardDrive className="text-emerald-400" /> },
+        { img: dysk, name: "Dysk SSD", spec: "Samsung 870 EVO 1TB", price: "400", icon: <FiHardDrive className="text-cyan-400" /> },
+        { img: zasilacz, name: "Zasilacz", spec: "Endorfy 1000W", price: "650", icon: <FiCpu className="text-emerald-400" /> },
+        { img: monitor, name: "Monitor", spec: "MSI Optix MAG301CR2 UWHD 200Hz", price: "1100", icon: <FiMonitor className="text-cyan-400" /> },
+        { img: mikrofon, name: "Mikrofon", spec: "Rode NT1", price: "700", icon: <FiHeadphones className="text-emerald-400" /> },
+        { img: ramie, name: "Ramię mikrofonu", spec: "Rode PSA1", price: "350", icon: <FiHeadphones className="text-cyan-400" /> },
+        { img: interfejs, name: "Interfejs audio", spec: "Rode AI 1", price: "500", icon: <FiHeadphones className="text-emerald-400" /> },
+        { img: sluchawki, name: "Słuchawki", spec: "Steelseries Arctis Nova 7", price: "500", icon: <FiHeadphones className="text-cyan-400" /> },
+        { img: klawiatura, name: "Klawiatura", spec: "MAD DOG GK600 Red Switches", price: "200", icon: <FiMousePointer className="text-emerald-400" /> },
+        { img: podkladka, name: "Podkładka", spec: "MAD DOG GMPR502", price: "70", icon: <FiMousePointer className="text-cyan-400" /> },
+        { img: myszka, name: "Myszka", spec: "A4TECH Bloody a70", price: "120", icon: <FiMousePointer className="text-emerald-400" /> }
+    ]
+
     return (
-        <section className="min-h-screen flex items-center justify-center relative m-auto px-4 py-8" id="computer">
-          <RevealOnScroll>
-            <div className="w-full max-w-7xl mx-auto">
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-emerald-500 to-cyan-600 bg-clip-text text-transparent text-center">Specyfikacja</h2>
-              <div className="p-2 md:p-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 md:gap-6 w-full">
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={plyta} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Płyta główna: <br /> Asus Rog STRIX B550-F <br /> Cena: <span className="text-green-500">950 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={cpu} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Procesor: <br /> AMD RYZEN 5700X <br /> Cena: <span className="text-green-500">500 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={obudowa} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Obudowa: <br /> Krux Leda (Midi Tower) <br /> Cena: <span className="text-green-500">350 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={karta} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Karta Graficzna: <br /> MSI Geforce RTX 3070 Gaming X <br /> Cena: <span className="text-green-500">1300 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={ram} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>2x8GB Kostki Ram: <br /> Kingston Fury Beast DDR5 5600mhz <br /> Cena: <span className="text-green-500">300 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={dysk} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Dysk SSD: <br /> Samsung 870 EVO 1TB <br /> Cena: <span className="text-green-500">400 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={zasilacz} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Zasilacz: <br /> Endorfy 1000W <br /> Cena: <span className="text-green-500">650 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={monitor} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Monitor: <br /> MSI Optix MAG301CR2 UWHD 200Hz <br /> Cena: <span className="text-green-500">1100 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={mikrofon} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Mikrofon: <br /> Rode NT1 <br /> Cena: <span className="text-green-500">700 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={ramie} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Ramię mikrofonu: <br /> Rode PSA1 <br /> Cena: <span className="text-green-500">350 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={interfejs} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Interfejs audio: <br /> Rode AI 1 <br /> Cena: <span className="text-green-500">500 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={sluchawki} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Słuchawki: <br /> Steelseries Arctis Nova 7 <br /> Cena: <span className="text-green-500">500 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={klawiatura} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Klawiatura: <br /> MAD DOG GK600 Red Switches <br /> Cena: <span className="text-green-500">200 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={podkladka} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Podkładka: <br /> MAD DOG GMPR502 <br /> Cena: <span className="text-green-500">70 </span>zł.</p>
-                    </div>
-                  </div>
-                  <div className="relative border border-gray-500/50 p-4 w-full aspect-square flex items-center justify-center overflow-hidden group">
-                    <img src={myszka} className="object-contain w-full h-full transition-all duration-300 group-hover:blur-sm md:group-hover:blur-xl"/>
-                    <div className="text-center absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm md:text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-2">
-                      <p>Myszka: <br /> A4TECH Bloody a70 <br /> Cena: <span className="text-green-500">120 </span>zł.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <section className="min-h-screen flex items-center justify-center relative px-4 py-20" id="computer">
+            <div className="absolute inset-0 overflow-hidden opacity-20">
+              <div className="absolute top-0 left-1/4 w-32 h-32 rounded-full bg-cyan-500 blur-3xl animate-pulse mt-25"></div>
+              <div className="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-emerald-500 blur-3xl opacity-70 animate-pulse mb-25"></div>
             </div>
-          </RevealOnScroll>
+
+            <RevealOnScroll>
+                <div className="w-full max-w-7xl mx-auto relative z-10">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
+                            Moja Specyfikacja
+                        </h2>
+                        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+                            Sprzęt, na którym pracuję i tworzę.
+                        </p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        {components.map((item, index) => (
+                            <div 
+                                key={index}
+                                className="bg-gray-900/80 border border-gray-800 rounded-xl overflow-hidden hover:border-emerald-500/30 transition-all duration-500 group"
+                            >
+                                <div className="relative h-48 p-6 flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-950">
+                                    <img 
+                                        src={item.img} 
+                                        className="h-full object-contain transition-transform duration-500 group-hover:scale-110" 
+                                        alt={item.name}
+                                    />
+                                    <div className="absolute top-4 left-4 p-2 bg-gray-800 rounded-lg border border-gray-700">
+                                        {item.icon}
+                                    </div>
+                                </div>
+                                
+                                <div className="p-6 border-t border-gray-800">
+                                    <h3 className="text-xl font-bold text-white mb-1">{item.name}</h3>
+                                    <p className="text-gray-400 text-sm mb-4">{item.spec}</p>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-emerald-400 font-medium">Cena: {item.price} zł</span>
+                                        <span className="text-xs text-gray-500">#{index + 1}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-16 text-center">
+                        <p className="text-gray-500 mb-2">Łączna wartość sprzętu:</p>
+                        <p className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
+                            7,690 zł
+                        </p>
+                    </div>
+                </div>
+            </RevealOnScroll>
         </section>
     )
 }

@@ -61,40 +61,53 @@ export const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="min-h-screen flex items-center justify-center py-12 md:py-24 px-4">
+        <section id="experience" className="min-h-screen flex items-center justify-center relative px-4 py-20">
+            <div className="absolute inset-0 overflow-hidden opacity-20">
+              <div className="absolute top-0 left-1/4 w-32 h-32 rounded-full bg-cyan-500 blur-3xl animate-pulse mt-25"></div>
+              <div className="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-emerald-500 blur-3xl opacity-70 animate-pulse mb-25"></div>
+            </div>
+
             <RevealOnScroll>
-                <div className="w-full max-w-7xl mx-auto">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-emerald-500 to-cyan-600 bg-clip-text text-transparent text-center">Doświadczenie</h2>
+                <div className="w-full max-w-7xl mx-auto relative z-10">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
+                            Moje Umiejętności
+                        </h2>
+                        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+                            Technologie, które znam i stale rozwijam.
+                        </p>
+                    </div>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {skills.map((skill, index) => (
                             <div 
                                 key={index}
-                                className={`bg-gradient-to-br from-white/5 to-white/10 border border-white/10 rounded-xl p-6 hover:border-${skill.gradient.split(' ')[1]}/50 transition-all duration-300 group hover:shadow-lg hover:shadow-${skill.gradient.split(' ')[1]}/10`}
+                                className={`bg-gray-900/80 border border-gray-800 rounded-xl p-6 hover:shadow-lg hover:shadow-${skill.gradient.split(' ')[1]}/10 transition-all duration-300`}
                             >
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className={`bg-${skill.gradient.split(' ')[1]}/10 p-3 rounded-lg group-hover:bg-${skill.gradient.split(' ')[1]}/20 transition-colors duration-300`}>
-                                        <svg className={`w-6 h-6 text-${skill.gradient.split(' ')[1]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className={`bg-gradient-to-br ${skill.gradient} p-3 rounded-lg`}>
+                                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={skill.icon} />
                                         </svg>
                                     </div>
-                                    <h3 className={`text-2xl font-bold bg-gradient-to-r ${skill.gradient} bg-clip-text text-transparent`}>
+                                    <h3 className="text-xl font-bold text-white">
                                         {skill.name}
                                     </h3>
                                 </div>
-                                <p className="text-gray-300 text-sm md:text-base">
+                                <p className="text-gray-300 text-sm mb-4">
                                     {skill.description}
                                 </p>
-                                <div className="mt-4 flex items-center">
-                                    <div className="w-full bg-white/10 rounded-full h-1.5">
+                                <div className="mt-4">
+                                    <div className="flex justify-between items-center mb-1">
+                                        <span className="text-xs text-gray-400">Poziom zaawansowania</span>
+                                        <span className="text-xs font-medium text-gray-300">{skill.level}%</span>
+                                    </div>
+                                    <div className="w-full bg-gray-800 rounded-full h-2">
                                         <div 
-                                            className={`bg-gradient-to-r ${skill.gradient} h-1.5 rounded-full`} 
+                                            className={`bg-gradient-to-r ${skill.gradient} h-2 rounded-full`} 
                                             style={{ width: `${skill.level}%` }}
                                         ></div>
                                     </div>
-                                    <span className="ml-2 text-xs text-gray-400">
-                                        {skill.level}%
-                                    </span>
                                 </div>
                             </div>
                         ))}
