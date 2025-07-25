@@ -2,18 +2,36 @@ import { RevealOnScroll } from "../RevealOnScroll"
 
 export const Home = () => {
     return (
-        <header id="home" className="min-h-screen flex items-center justify-center realtive">
+        <header id="home" className="min-h-screen flex items-center justify-center relative">
             <RevealOnScroll>
-            <div className="text-center z-10 px-4">
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-right max-w-3xl">Jestem Wiktor i pomogę ci z <span className="bg-gradient-to-r from-emerald-500 to-cyan-600 bg-clip-text text-transparent">rozwojem twojego wymarzonego</span> projektu!</h1>
+                <div className="text-center z-10 px-4 max-w-7xl mx-auto">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight max-w-5xl mx-auto">
+                        Cześć, jestem <span className="text-white">Wiktor</span> i pomogę Ci z <br />
+                        <span className="bg-gradient-to-r from-emerald-500 to-cyan-600 bg-clip-text text-transparent">
+                            rozwojem Twojego projektu
+                        </span>
+                    </h1>
 
-                <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">Boże kurwa nie wiem co tu dać, doda się tutej coś później. Pozdrawiam _wiktoreq_12 ~ 19.07.2025 20:11</p>
+                    <p className="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                        Specjalizuję się w tworzeniu nowoczesnych stron internetowych i aplikacji, 
+                        łącząc funkcjonalność z estetycznym designem.
+                    </p>
 
-                <div className="flex justify-center space-x-4">
-                    <a href="" className="bg-cyan-500 text-white py-3 px-6 font-medium transition relative overflow-hidden hover:bg-cyan-600">Zobacz portfolio</a>
-                    <a href="" className="bg-transparent border-1 border-gray-500/50 text-white py-3 px-6 font-medium transition relative overflow-hidden hover:bg-[rgba(255,255,255,0.04)]">Skontaktuj się ze mną</a>
+                    <div className="flex flex-col sm:flex-row justify-center gap-4">
+                        <a 
+                            href="#portfolio" 
+                            className="bg-gradient-to-r from-cyan-500 to-emerald-600 text-white py-3 px-8 font-medium rounded-lg transition-all hover:from-cyan-600 hover:to-emerald-700 hover:shadow-lg hover:shadow-cyan-500/20"
+                        >
+                            Zobacz portfolio
+                        </a>
+                        <a 
+                            href="#contact" 
+                            className="bg-transparent border border-white/20 text-white py-3 px-8 font-medium rounded-lg transition-all hover:bg-white/10 hover:border-white/30"
+                        >
+                            Skontaktuj się ze mną
+                        </a>
+                    </div>
                 </div>
-            </div>
             </RevealOnScroll>
         </header>
     )
