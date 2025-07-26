@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="relative">
       <div className="fixed inset-0 -z-50 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900" />
+        <div className="absolute inset-0 bg-gray-950" />
         
         <div className="absolute inset-0 opacity-10 bg-noise-texture" />
         
