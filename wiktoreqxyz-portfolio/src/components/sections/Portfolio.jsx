@@ -5,11 +5,9 @@ import { RevealOnScroll } from "../RevealOnScroll";
 import { FiArrowLeft, FiExternalLink, FiGithub, FiChevronRight } from "react-icons/fi";
 
 import portfolioPreview from "./image.png";
-import website1 from "./portfolio/image.png";
-import website2 from "./portfolio/image.png";
-import website3 from "./portfolio/image.png";
-import bot1 from "./portfolio/image.png";
-import bot2 from "./portfolio/image.png";
+import websitehamel from "./portfolio/hamel/main.png";
+import websitedaphner from "./portfolio/daphner/main.png";
+import websitewiktoreq from "./portfolio/wiktoreq/image.png";
 
 export const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState('strony');
@@ -20,52 +18,32 @@ export const Portfolio = () => {
     strony: [
       { 
         id: 1, 
-        image: website1, 
-        title: 'Strona pod portfolio #1', 
-        description: 'Strona tworzona pod moje portfolio, aby był wgląd na moje inne projekty.', 
-        tags: ['React', 'Tailwind Css', 'Vite'],
-        link: '#',
-        github: '#'
+        image: websitehamel, 
+        title: 'Hamel.PL', 
+        description: 'Strona wykonana prze ze mnie oraz przez jeszcze jedną dla firmy Hamel.PL (Strona nie jest jeszcze dostępna publicznie. Dostałem zgodę na udostępnienie jest w portfolio.)', 
+        tags: ['Html', 'Css', 'Js'],
+        link: 'https://hamel.pl',
+        github: ''
       },
       { 
         id: 2, 
-        image: website2, 
-        title: 'Strona pod portfolio #2', 
-        description: 'Strona tworzona pod moje portfolio, aby był wgląd na moje inne projekty.', 
-        tags: ['Next.js', 'Tailwind Css', 'MongoDB'],
-        link: '#',
-        github: '#'
+        image: websitedaphner, 
+        title: 'Daphnerbot.xyz', 
+        description: 'Strona wykonana prze ze mnie oraz przez jeszcze jedną dla bota daphner. (Strona nie jest jeszcze dostępna publicznie. Dostałem zgodę na udostępnienie jest w portfolio.)', 
+        tags: ['React.js', 'Next.js', 'Tailwind Css'],
+        link: 'https://daphnerbot.xyz',
+        github: ''
       },
       { 
         id: 3, 
-        image: website3, 
-        title: 'Strona pod portfolio #3', 
-        description: 'Strona tworzona pod moje portfolio, aby był wgląd na moje inne projekty.', 
-        tags: ['React', 'Node.js', 'Express.js'],
-        link: '#',
-        github: '#'
+        image: websitewiktoreq, 
+        title: 'Wiktoreq.xyz', 
+        description: 'Strona, którą robiłem dla samego siebie, aby zrobić swoje portfolio.', 
+        tags: ['React.js', 'Framer Motion', 'Tailwind Css'],
+        link: 'https://wiktoreq.xyz',
+        github: 'https://github.com/wavi23'
       },
     ],
-    boty: [
-      { 
-        id: 4, 
-        image: bot1, 
-        title: 'Bot Discord pod portfolio #1', 
-        description: 'Bot tworzony pod portfolio, aby był wgląd na moje inne projekty.', 
-        tags: ['Python', 'Discord.Py', 'Sqlite'],
-        link: '#',
-        github: '#'
-      },
-      { 
-        id: 5, 
-        image: bot2, 
-        title: 'Bot Discord pod portfolio #2',
-        description: 'Bot tworzony pod portfolio, aby był wgląd na moje inne projekty.', 
-        tags: ['Python', 'Discord.Py', 'Sqlite'],
-        link: '#',
-        github: '#'
-      },
-    ]
   };
 
   const handleGalleryToggle = () => {

@@ -8,7 +8,7 @@ export const Footer = () => {
         {
             name: "GitHub",
             icon: <FiGithub className="h-5 w-5" />,
-            url: "https://github.com/wiktoreq12",
+            url: "https://github.com/wavi23",
             color: "hover:text-gray-400"
         },
         {
@@ -99,20 +99,24 @@ export const Footer = () => {
 
                     <div className="space-y-4">
                         <h3 className="text-white font-medium text-left">Nawigacja</h3>
-                        <ul className="space-y-3 text-left">
-                            {footerLinks.map((link, index) => (
+                            <ul className="space-y-3">
+                              {footerLinks.map((link, index) => (
                                 <li key={index}>
-                                    <a 
-                                        href={link.href} 
-                                        className="text-gray-400 hover:text-cyan-400 text-sm transition-colors flex items-center"
-                                    >
-                                        <FiArrowRight className="mr-2 text-xs opacity-0 group-hover:opacity-100 transition-opacity" />
+                                  <a 
+                                    href={link.href} 
+                                    className="group text-gray-400 hover:text-cyan-400 text-sm transition-all duration-300 flex items-center"
+                                  >
+                                    <span className="relative inline-flex items-center">
+                                      <FiArrowRight className="mr-2 text-xs opacity-15 group-hover:opacity-100 transition-all duration-300 transform -translate-x-1 group-hover:translate-x-0" />
+                                      <span className="transition-all duration-300 group-hover:translate-x-2">
                                         {link.name}
-                                    </a>
+                                      </span>
+                                    </span>
+                                  </a>
                                 </li>
-                            ))}
-                        </ul>
-                    </div>
+                              ))}
+                            </ul>
+                        </div>
 
                     <div className="space-y-4">
                         <h3 className="text-white font-medium">Kontakt</h3>
